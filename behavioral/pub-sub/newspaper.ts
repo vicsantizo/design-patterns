@@ -1,6 +1,8 @@
 import { IPublisher } from "./IPublisher";
 import { ISubscriber } from "./ISubscriber";
 
+// To-dos
+// - put subscription logic into a separate object
 export class Newspaper implements IPublisher {
   private subscribers: ISubscriber[] = [];
   private newspaperReleases: string[] = [];
@@ -28,7 +30,7 @@ export class Newspaper implements IPublisher {
     this.subscribers.splice(subscriberIndex, 1);
   }
 
-  // context will contain any contextual information for the subscribe to use
+  // context will contain any contextual information for the subscriber to use
   notify(context: unknown): void {
     this.subscribers.forEach(subscriber => subscriber.update(this.getLatestRelease()));
   }
