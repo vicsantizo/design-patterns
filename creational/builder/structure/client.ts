@@ -1,4 +1,4 @@
-import { ConcreteBuilder1 } from "./ConcreteBuilder1";
+import { ConcreteBuilder1 } from "./concreteBuilder1";
 import { ConcreteBuilder2 } from "./concreteBuilder2";
 import { Director } from "./director";
 
